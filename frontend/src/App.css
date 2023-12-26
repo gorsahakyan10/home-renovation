@@ -1,0 +1,31 @@
+:root {
+    --color-1: white;
+    --color-2: black;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: var(--color-2);
+}
+
+.App {
+}
+
+.container {
+    background: var(--color-1);
+}
