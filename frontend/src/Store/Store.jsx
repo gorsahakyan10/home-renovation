@@ -2,7 +2,6 @@ import React from "react";
 import Carousel from "../Carousel";
 
 function Store({ id, name, city, address, imageLinks }) {
-    console.log(id);
     return (
         <div className="Store border p-3">
             <p className="m-0">

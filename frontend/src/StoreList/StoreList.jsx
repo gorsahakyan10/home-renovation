@@ -16,17 +16,17 @@ function StoreList() {
     }
     return (
         <div className="StoreList">
-            <div className="row d-flex flex-column align-items-center">
-                <FilterByCities
+            <FilterByCities
                     cities={cities}
                     setSelectedCity={setSelectedCity}
                     value={selectedCity}
                     searchText={'Поиск магазина по городу'}
                 />
+            <div className="row row-cols-md-2 row-cols-lg-3 row-cols-1">
                 {stores.length === 0 ? <h2>Ничего не найдено</h2> : ""}
                 {stores.map((store, i) => {
                     return (
-                        <div className="col-md-8 mb-3" key={i + Math.random()}>
+                        <div className="col mb-3" key={i + Math.random()}>
                             <Store
                                 id={store.id}
                                 name={store.name}

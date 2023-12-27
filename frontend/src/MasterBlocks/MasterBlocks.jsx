@@ -28,7 +28,7 @@ function MasterBlocks() {
                 searchText={'Поиск мастера по городу'}
             />
             {masters.length === 0 ? <h2>Ничего не найдено</h2> : ""}
-            <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2">
+            <div className="row row-cols-md-2 row-cols-lg-3 row-cols-1">
                 {masters.map((master, i) => {
                     return (
                         <div className="col mb-3" key={i + Math.random()}>
@@ -38,7 +38,7 @@ function MasterBlocks() {
                                 workCity={master.workCity}
                                 phone={master.phone}
                                 whatsApp={master.whatsApp}
-                                imageLinks={master.workImages || []}
+                                imageLinks={master.imageLinks || []}
                             />
                         </div>
                     );
