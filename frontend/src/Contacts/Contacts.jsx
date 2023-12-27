@@ -1,20 +1,26 @@
 import React from "react";
 
-function Contacts({ name, workCity, phone, whatsApp }) {
+function Contacts({ contacts }) {
     return (
         <div className="Contacts mb-2">
-            <p className="m-0">
-                <span className="KeyWord">Имя мастера:</span> {name}
-            </p>
-            <p className="m-0">
-                <span className="KeyWord">Город:</span> {workCity}
-            </p>
-            <p className="m-0">
-                <span className="KeyWord">Тел.:</span> {phone}
-            </p>
-            <p className="m-0">
-                <span className="KeyWord">WhatsApp:</span> {whatsApp}
-            </p>
+            {contacts.map((contact) => {
+                if (contact.isLink === true) {
+                    return (
+                        <p className="m-0">
+                            <span className="KeyWord">
+                                {contact.key}: 
+                            </span>
+                           <a href={contact.value} target="_blank">{contact.value}</a> 
+                        </p>
+                    );
+                }
+                return (
+                    <p className="m-0">
+                        <span className="KeyWord">{contact.key}:</span>{" "}
+                        {contact.value}
+                    </p>
+                );
+            })}
         </div>
     );
 }

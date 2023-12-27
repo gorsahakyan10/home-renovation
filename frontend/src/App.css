@@ -1,6 +1,7 @@
 :root {
     --color-1: white;
     --color-2: black;
+    --color-3: rgb(18, 187, 18)
 }
 
 * {
@@ -13,8 +14,13 @@ img {
     height: auto;
 }
 
-a{
-  text-decoration: none;
+a {
+    text-decoration: none;
+    color: var(--color-2);
+}
+
+a:hover {
+   color: var(--color-3);
 }
 
 body {

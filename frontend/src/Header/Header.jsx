@@ -8,11 +8,11 @@ function Header() {
         return isActive ? "isActive" : "";
     }
     return (
-        <header>
+        <header className="d-flex flex-column flex-md-row">
             <NavLink to="/">
                 <Logo />
             </NavLink>
-            <nav className="Nav d-flex">
+            <nav className="Nav d-flex flex-row flex-md-row">
                 <NavLink className={setIsActive} to="/">
                     Главная
                 </NavLink>

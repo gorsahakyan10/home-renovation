@@ -15,5 +15,5 @@ header {
 }
 
 .Nav .isActive {
-    color: rgb(18, 187, 18);
+    color: var(--color-3);
 }
