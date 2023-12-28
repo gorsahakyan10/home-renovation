@@ -1,5 +1,6 @@
 import express from "express";
 import mysql from "mysql2";
+import path from 'path';
 
 const connection = mysql.createConnection({
     port: 3306,
@@ -18,6 +19,8 @@ connection.connect((err) => {
 const PORT = 8000;
 
 const app = express();
+
+app.use(express.static(path.dirname('public') + '/public'))
 
 app.use((req, res, next) => {
    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
