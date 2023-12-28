@@ -16,7 +16,7 @@ connection.connect((err) => {
     console.log("MSQL works...");
 });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 
